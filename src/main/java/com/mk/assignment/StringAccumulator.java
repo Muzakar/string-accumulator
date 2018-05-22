@@ -101,7 +101,7 @@ public class StringAccumulator {
      * Takes a stream of strings and sort them based on length.
      * The sorting is done in reversed ordered i.e. first element will be the string with biggest length.
      */
-    private static Function<Stream<String>, List<String>> reverseSortBasedOnLength = stringStream ->
+    private Function<Stream<String>, List<String>> reverseSortBasedOnLength = stringStream ->
             stringStream.sorted(Comparator.comparingInt(String::length).reversed()).collect(Collectors.toList());
 
     /**
